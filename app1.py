@@ -303,12 +303,12 @@ def main():
         # st.markdown("### 填写协议信息")
 
         with st.container():
-            st.markdown('<div class="step-box"><strong>步骤1：输入公司信息</strong></div>', unsafe_allow_html=True)
+            st.markdown('<div class="step-box"><strong>步骤1：输入公司全称</strong></div>', unsafe_allow_html=True)
 
             company_name = st.text_input(
-                "**目标公司全称** *",
-                placeholder="请输入与营业执照一致的完整公司名称",
-                help="请务必确保公司名称准确无误",
+                "输入完按Enter键 ",
+                # placeholder="输入完按Enter键",
+                # help="请务必确保公司名称准确无误",
                 key="company_name"
             )
 
@@ -338,9 +338,9 @@ def main():
                 if st.session_state.company_address:
                     # 有自动搜索结果
                     company_address = st.text_area(
-                        "公司注册地址",
+                        "请确认或修改，按Ctrl+Enter键",
                         value=st.session_state.company_address,
-                        placeholder="请确认或修改公司注册地址",
+                        # placeholder="请确认或修改公司注册地址，按Ctrl+Enter键",
                         height=100,
                         key="address_input"
                     )
@@ -348,7 +348,7 @@ def main():
                     # 需要手动输入
                     company_address = st.text_area(
                         "公司注册地址 *",
-                        placeholder="请准确填写公司的工商注册地址",
+                        # placeholder="请准确填写公司的工商注册地址",
                         height=100,
                         key="address_input"
                     )
