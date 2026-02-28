@@ -338,7 +338,7 @@ def main():
                 if st.session_state.company_address:
                     # 有自动搜索结果
                     company_address = st.text_area(
-                        "请确认或修改，按Ctrl+Enter键",
+                        "请确认，或修改后按Ctrl+Enter键",
                         value=st.session_state.company_address,
                         # placeholder="请确认或修改公司注册地址，按Ctrl+Enter键",
                         height=100,
